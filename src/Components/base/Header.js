@@ -21,17 +21,19 @@ const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  height: 6rem;
+  height: 8rem;
+  box-sizing: border-box;
   padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
 `;
 
 const TitleContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   background: #ffffff;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
 `;
 
 const Title = styled.div`
