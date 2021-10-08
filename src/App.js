@@ -10,7 +10,11 @@ const App = (props) => {
     <Fragment>
       <GlobalStyle />
       <Switch>
-        <Route path="/" exact render={(props) => <AuthRouter {...props} />} />
+        <Route
+          path={['/', '/signup', '/signin']}
+          exact
+          render={(props) => <AuthRouter {...props} />}
+        />
         <Route
           path="/curation"
           render={(props) => <CurationRouter {...props} />}
@@ -35,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+  }
+
+  img {
+    object-fit:cover;
   }
 `;
 

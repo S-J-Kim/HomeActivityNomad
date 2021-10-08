@@ -1,19 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import CategoryTag from './CategoryTag';
 
 const CurationItem = (props) => {
-  const { items } = props;
+  const { items, match } = props;
 
   return (
     <CurationItemsContainer>
       {items.map((el) => {
         return (
-          <ItemContainer>
-            <ItemImage src={el.itemImage} />
-            <ItemName>{el.itemName}</ItemName>
-            <CategoryTag type={el.type} />
-          </ItemContainer>
+          <Link to={`${el.type}/${el.id}`}>
+            <ItemContainer>
+              <ItemImage src={el.itemImage} />
+              <ItemName>{el.itemName}</ItemName>
+              <CategoryTag type={el.type} />
+            </ItemContainer>
+          </Link>
         );
       })}
     </CurationItemsContainer>

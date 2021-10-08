@@ -6,24 +6,29 @@ import SectionHeader from '../../Components/base/SectionTitle';
 import CurationItem from '../../Components/Curation/CurationItem';
 
 const CurationList = (props) => {
+  const { match } = props;
   const [mainCategory, setMainCategory] = useState();
   const [items, setItems] = useState([
     {
+      id: 1,
       itemName: '아이템이름',
       itemImage: '',
       type: 'Food',
     },
     {
+      id: 2,
       itemName: '아이템이름',
       itemImage: '',
       type: 'Food',
     },
     {
+      id: 3,
       itemName: '아이템이름',
       itemImage: '',
       type: 'Food',
     },
     {
+      id: 4,
       itemName: '아이템이름',
       itemImage: '',
       type: 'Food',
