@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import AuthRouter from './Routers/AuthRouter';
 import CurationRouter from './Routers/CurationRouter';
 import reset from 'styled-reset';
+import StoryRouter from './Routers/StoryRouter';
 
 const App = (props) => {
   return (
@@ -19,6 +20,7 @@ const App = (props) => {
           path="/curation"
           render={(props) => <CurationRouter {...props} />}
         />
+        <Route path="/story" render={(props) => <StoryRouter {...props} />} />
       </Switch>
     </Fragment>
   );
@@ -39,6 +41,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+  }
+
+  #root{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
   }
 
   img {
