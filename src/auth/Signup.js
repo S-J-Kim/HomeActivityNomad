@@ -85,7 +85,7 @@ const Signup = () => {
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
-    history.push('/trend');
+    history.push('/taste/step1');
   };
 
   const prefixSelector = (
