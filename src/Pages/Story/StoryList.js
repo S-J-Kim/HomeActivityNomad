@@ -5,6 +5,7 @@ import CategoryTag from '../../Components/Curation/CategoryTag';
 import { BsHeart, BsShareFill } from 'react-icons/bs';
 import StoryHeader from '../../Components/Story/list/StoryHeader';
 import { AiOutlineComment } from 'react-icons/ai';
+import { useHistory } from 'react-router-dom';
 
 const StoryList = (props) => {
   const [stories, setStories] = useState({
@@ -13,6 +14,7 @@ const StoryList = (props) => {
     content: '오늘 어깨를 맛있게 조졌다. 난 이제 어깡',
     type: 'Workout',
   });
+  const history = useHistory();
 
   return (
     <Fragment>
@@ -29,7 +31,10 @@ const StoryList = (props) => {
           </StoryInfoContainer>
           <StoryButtonContainer>
             <BsHeart size={30} color={'red'} />
-            <AiOutlineComment size={30} />
+            <AiOutlineComment
+              size={30}
+              onClick={() => history.push('/story/comment/1')}
+            />
             <BsShareFill size={30} />
           </StoryButtonContainer>
         </StoryDescContainer>

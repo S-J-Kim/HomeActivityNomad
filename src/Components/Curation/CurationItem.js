@@ -11,15 +11,23 @@ const CurationItem = (props) => {
       {items.map((el) => {
         return (
           <Link to={`${el.type}/${el.id}`}>
-            <ItemContainer>
-              <ItemImage src={el.itemImage} />
-              <ItemName>{el.itemName}</ItemName>
-              <CategoryTag type={el.type} />
-            </ItemContainer>
+            <SingleCurationItem item={el} />
           </Link>
         );
       })}
     </CurationItemsContainer>
+  );
+};
+
+const SingleCurationItem = ({ item }) => {
+  const { itemImage, itemName, type } = item;
+
+  return (
+    <ItemContainer>
+      <ItemImage src={itemImage} />
+      <ItemName>{itemName}</ItemName>
+      <CategoryTag type={type} />
+    </ItemContainer>
   );
 };
 
@@ -46,6 +54,7 @@ const ItemContainer = styled.div`
 const ItemImage = styled.img`
   width: 12.5rem;
   height: 12.5rem;
+  align-content: stretch;
   background-color: grey;
 `;
 
@@ -56,3 +65,4 @@ const ItemName = styled.h2`
 `;
 
 export default CurationItem;
+export { SingleCurationItem };

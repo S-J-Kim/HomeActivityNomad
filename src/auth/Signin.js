@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { Form, Button, Input, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined, HomeTwoTone } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
+import Container from '../Components/base/Container';
 
 const Signin = (props) => {
   const history = useHistory();
 
   return (
-    <SigninContainer>
+    <SigninContainer style={{ height: '100v' }}>
       <MainLogo style={{ fontSize: '155px' }} />
       <Form
         name="normal_login"
@@ -55,6 +56,7 @@ const Signin = (props) => {
             type="primary"
             htmlType="submit"
             className="login-form-button"
+            onClick={() => history.push('/trend')}
             block
           >
             Log in
@@ -72,9 +74,11 @@ const MainLogo = styled(HomeTwoTone)`
   margin: 100px auto;
 `;
 
-const SigninContainer = styled.section`
+const SigninContainer = styled(Container)`
   width: 100%;
+  height: 100vh;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
 `;

@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Space } from 'antd';
 import { HomeTwoTone } from '@ant-design/icons';
 import './index.css';
+import Container from './Components/base/Container';
 
 const Splash = (props) => {
   const history = useHistory();
@@ -37,7 +38,7 @@ const MainLogo = styled(HomeTwoTone)`
   margin: 150px auto;
 `;
 
-const MainPageContainer = styled.section`
+const MainPageContainer = styled(Container)`
   width: 100%;
   display: flex;
   flex-direction: column;

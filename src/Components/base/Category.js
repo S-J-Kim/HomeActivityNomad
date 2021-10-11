@@ -105,3 +105,4 @@ const categories = [
 ];
 
 export default Category;
+export { CategoryButton, CategoryButtonInput, CategoryContainer };

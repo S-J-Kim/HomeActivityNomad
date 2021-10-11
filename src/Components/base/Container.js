@@ -4,6 +4,7 @@ const Container = styled.section`
   width: 100%;
   height: auto;
   display: flex;
+  flex: 1;
   flex-direction: column;
   margin-top: 8rem;
   padding: 1.5rem;

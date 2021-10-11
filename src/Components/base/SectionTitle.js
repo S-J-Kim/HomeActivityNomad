@@ -16,7 +16,7 @@ const SectionHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: ${({ mt }) => `${mt}rem`};
-  margin-top: ${({ mb }) => `${mb}rem`};
+  margin-bottom: ${({ mb }) => `${mb}rem`};
 `;
 
 const BackButton = styled.img`

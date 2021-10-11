@@ -5,6 +5,10 @@ import AuthRouter from './Routers/AuthRouter';
 import CurationRouter from './Routers/CurationRouter';
 import reset from 'styled-reset';
 import StoryRouter from './Routers/StoryRouter';
+import WorldcupRouter from './Routers/WorldcupRouter';
+import TasteCheckRouter from './Routers/TasteCheckRouter';
+import TrendDashboard from './Pages/Dashboard/TrendDashboard';
+import Footer from './Components/base/Footer';
 
 const App = (props) => {
   return (
@@ -21,7 +25,20 @@ const App = (props) => {
           render={(props) => <CurationRouter {...props} />}
         />
         <Route path="/story" render={(props) => <StoryRouter {...props} />} />
+        <Route
+          path="/worldcup"
+          render={(props) => <WorldcupRouter {...props} />}
+        />
+        <Route
+          path="/taste"
+          render={(props) => <TasteCheckRouter {...props} />}
+        />
+        <Route
+          path="/trend"
+          render={(props) => <TrendDashboard {...props} />}
+        />
       </Switch>
+      <Footer />
     </Fragment>
   );
 };
