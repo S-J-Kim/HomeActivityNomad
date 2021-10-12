@@ -12,7 +12,7 @@ const CurationList = (props) => {
     {
       id: 1,
       itemName: '막국수',
-      itemImage: `${process.env.PUBLIC_URL}/images/mak.jpeg`,
+      itemImage: process.env.PUBLIC_URL + '/images/mak.jpeg',
       type: 'Food',
     },
     {
