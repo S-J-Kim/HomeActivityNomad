@@ -8,9 +8,7 @@ const Header = (props) => {
     <HeaderContainer>
       <TitleContainer>
         <Title>{title}</Title>
-        <ProfileImage
-          src={process.env.PUBLIC_URL + '/images/base/defaultprofileimage.svg'}
-        />
+        <ProfileImage src={'/images/base/defaultprofileimage.svg'} />
       </TitleContainer>
       <SubTitle>{subTitle}</SubTitle>
     </HeaderContainer>

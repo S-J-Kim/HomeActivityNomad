@@ -11,7 +11,7 @@ const CurationDetail = (props) => {
   const { cat, pk } = useParams();
   const [item, setItem] = useState({
     objectName: '막국수',
-    objectImage: `${process.env.PUBLIC_URL}/images/mak.jpeg`,
+    objectImage: `/images/mak.jpeg`,
     desc: '메밀국수를 김칫국물에 말아먹는 음식. 메밀국수를 김칫국물에 말아먹는 음식. 강원도 향토음식의 하나이다.',
     type: cat,
     relatedInfo: {
