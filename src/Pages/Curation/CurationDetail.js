@@ -10,13 +10,18 @@ import RelatedStories from '../../Components/Curation/detail/RelatedStories';
 const CurationDetail = (props) => {
   const { cat, pk } = useParams();
   const [item, setItem] = useState({
-    objectName: '푸드이름 1234',
-    objectImage: '',
-    desc: '블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라 블라블라 쏠라쏠라블라블라 쏠라쏠라블라블라 쏠라쏠라',
+    objectName: '막국수',
+    objectImage: `${process.env.PUBLIC_URL}/images/mak.jpeg`,
+    desc: '메밀국수를 김칫국물에 말아먹는 음식. 메밀국수를 김칫국물에 말아먹는 음식. 강원도 향토음식의 하나이다.',
     type: cat,
     relatedInfo: {
-      ingredients: ['재료1', '재료2', '재료3'],
-      directions: ['방법1', '방법2', '방법3'],
+      ingredients: ['무', '양파', '키위', '닭가슴살 캔', '땅콩', '메밀면'],
+      directions: [
+        '분량의 재료를 섞어 비빔장을 만듭니다. 무는 강판에 갈고 양파, 키위도 갈아서 넣어줍니다',
+        '땅콩은 적당히 부숴둡니다',
+        '메밀국수를 삶은후 찬물에서 재빨리 헹구어 주세요',
+        '이제 넓은 접시에 준비한 메밀국수. 고명. 양념을 담아내시면 끝.',
+      ],
     },
     relatedStories: [
       { thumbnail: '', author: 'freind1' },
@@ -42,7 +47,6 @@ const CurationDetail = (props) => {
 
 const CurationObjectImage = styled.img`
   width: 100%;
-  padding-bottom: 100%;
   background-color: grey;
   object-fit: cover;
 `;

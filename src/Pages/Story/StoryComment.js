@@ -8,33 +8,25 @@ import ShadowedContainer from '../../Components/Curation/detail/ShadowedContaine
 const StoryComment = (props) => {
   const [comments, setComments] = useState([
     {
-      profileImage: '',
-      nickname: '친구이름',
-      comment: '댓글내용 댓글내용 댓글내용 댓글내용 댓글내용',
+      profileImage: `${process.env.PUBLIC_URL}/images/f2.jpeg`,
+      nickname: 'dodod',
+      comment: '여긴 댓글이없네요 ㅎㅎ 내가1빠',
       createdAt: '10:53 AM',
-      likes: 30,
+      likes: 26,
     },
     {
-      profileImage: '',
-      nickname: '친구이름',
-      comment: '댓글내용 댓글내용 댓글내용 댓글내용 댓글내용',
+      profileImage: `${process.env.PUBLIC_URL}/images/f3.jpeg`,
+      nickname: '화성갈끄니까',
+      comment: 'ㅋㅋ나도 이젠 인싸. 딱지치기한판할래?',
       createdAt: '10:53 AM',
-      likes: 30,
+      likes: 11,
     },
     {
-      profileImage: '',
-      nickname: '친구이름',
-      comment:
-        '댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용 댓글내용',
+      profileImage: `${process.env.PUBLIC_URL}/images/images.jpeg`,
+      nickname: '앵준',
+      comment: '오 너도 드뎌 오징어게임봤어?ㅋㅋ',
       createdAt: '10:53 AM',
-      likes: 30,
-    },
-    {
-      profileImage: '',
-      nickname: '친구이름',
-      comment: '댓글내용 댓글내용 댓글내용 댓글내용 댓글내용',
-      createdAt: '10:53 AM',
-      likes: 30,
+      likes: 5,
     },
   ]);
 
@@ -50,7 +42,7 @@ const StoryComment = (props) => {
                 <Comment>
                   <CommentInfoContainer>
                     <CommentAuthorInfo>
-                      <AuthorProfileImage />
+                      <AuthorProfileImage src={comment.profileImage} />
                       <AuthorNickname>{comment.nickname}</AuthorNickname>
                     </CommentAuthorInfo>
                     <CommentSubmittedTime>

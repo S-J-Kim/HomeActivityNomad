@@ -11,26 +11,26 @@ const CurationList = (props) => {
   const [items, setItems] = useState([
     {
       id: 1,
-      itemName: '아이템이름',
-      itemImage: '',
+      itemName: '막국수',
+      itemImage: `${process.env.PUBLIC_URL}/images/mak.jpeg`,
       type: 'Food',
     },
     {
       id: 2,
-      itemName: '아이템이름',
-      itemImage: '',
+      itemName: '닭갈비',
+      itemImage: `${process.env.PUBLIC_URL}/images/galbi.jpeg`,
       type: 'Food',
     },
     {
       id: 3,
-      itemName: '아이템이름',
-      itemImage: '',
+      itemName: '마라탕',
+      itemImage: `${process.env.PUBLIC_URL}/images/images.jpeg`,
       type: 'Food',
     },
     {
       id: 4,
-      itemName: '아이템이름',
-      itemImage: '',
+      itemName: '돈가스',
+      itemImage: `${process.env.PUBLIC_URL}/images/don.jpeg`,
       type: 'Food',
     },
   ]);

@@ -13,9 +13,15 @@ const TrendDashboard = (props) => {
         <TrendPieChart />
         <SectionHeader mb={2}>Rankings</SectionHeader>
         <RankingContainer>
-          <RankingBar proposition={80}>Obj1</RankingBar>
-          <RankingBar proposition={65}>Obj2</RankingBar>
-          <RankingBar proposition={55}>Obj3</RankingBar>
+          <RankingBar proposition={80} color="#21f3d6">
+            곱창
+          </RankingBar>
+          <RankingBar proposition={65} color="#ffc33b">
+            갈비찜
+          </RankingBar>
+          <RankingBar proposition={55} color="#8b22ff">
+            파스타
+          </RankingBar>
         </RankingContainer>
       </Container>
     </Fragment>
@@ -40,7 +46,7 @@ const RankingBar = styled.div`
   height: 2.5rem;
   font-size: 1.5rem;
   border-radius: 999px;
-  background-color: green;
+  background-color: ${({ color }) => color};
   color: white;
   margin-bottom: 1rem;
   padding-left: 1rem;

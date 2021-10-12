@@ -8,14 +8,14 @@ import CurationDetailHeader from '../../Components/Curation/detail/CurationDeati
 const WorldcupRound = (props) => {
   const [worldcupItem] = useState([
     {
-      itemImage: '',
-      itemName: '월드컵대결',
-      type: 'Food',
+      itemImage: `${process.env.PUBLIC_URL}/images/movie1.jpeg`,
+      itemName: '명량',
+      type: 'Media',
     },
     {
-      itemImage: '',
-      itemName: '월드컵대결',
-      type: 'Food',
+      itemImage: `${process.env.PUBLIC_URL}/images/movie2.jpeg`,
+      itemName: '신과함께: 인과 연',
+      type: 'Media',
     },
   ]);
 
@@ -24,7 +24,7 @@ const WorldcupRound = (props) => {
       <Header title="집콕 월드컵" subTitle="홈 액티비티 월드컵" />
       <Container>
         <CurationDetailHeader
-          item={{ objectName: '더 좋아하는 것은 무엇?', type: 'Food' }}
+          item={{ objectName: '더 좋아하는 것은 무엇?', type: 'Media' }}
         />
         {worldcupItem.map((item) => {
           return <WorldcupRoundItem item={item} />;
