@@ -11,11 +11,7 @@ const StoryHeader = (props) => {
       <TitleContainer>
         <Title>{title}</Title>
         {isLoggedIn ? (
-          <ProfileImage
-            src={
-              process.env.PUBLIC_URL + '/images/base/defaultprofileimage.svg'
-            }
-          />
+          <ProfileImage src={'/images/base/defaultprofileimage.svg'} />
         ) : (
           <AiOutlinePlusCircle />
         )}

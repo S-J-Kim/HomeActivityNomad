@@ -8,21 +8,21 @@ import ShadowedContainer from '../../Components/Curation/detail/ShadowedContaine
 const StoryComment = (props) => {
   const [comments, setComments] = useState([
     {
-      profileImage: `${process.env.PUBLIC_URL}/images/f2.jpeg`,
+      profileImage: `/images/f2.jpeg`,
       nickname: 'dodod',
       comment: '여긴 댓글이없네요 ㅎㅎ 내가1빠',
       createdAt: '10:53 AM',
       likes: 26,
     },
     {
-      profileImage: `${process.env.PUBLIC_URL}/images/f3.jpeg`,
+      profileImage: `/images/f3.jpeg`,
       nickname: '화성갈끄니까',
       comment: 'ㅋㅋ나도 이젠 인싸. 딱지치기한판할래?',
       createdAt: '10:53 AM',
       likes: 11,
     },
     {
-      profileImage: `${process.env.PUBLIC_URL}/images/images.jpeg`,
+      profileImage: `/images/images.jpeg`,
       nickname: '앵준',
       comment: '오 너도 드뎌 오징어게임봤어?ㅋㅋ',
       createdAt: '10:53 AM',

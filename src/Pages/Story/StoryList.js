@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 const StoryList = (props) => {
   const [stories, setStories] = useState({
-    profileImage: `${process.env.PUBLIC_URL}/images/images.jpeg`,
+    profileImage: `/images/images.jpeg`,
     nickname: '친구이름',
     content:
       '요즘 핫한 오징어게임! 드디어 나도봤다! 추억의 달고나게임ㅎㅎ 아쉽게 실패 ㅠ',
@@ -46,7 +46,7 @@ const StoryList = (props) => {
 
 const ExpandedContainer = styled(Container)`
   flex: 1;
-  background-image: url('${process.env.PUBLIC_URL}/images/dalgona.jpeg');
+  background-image: url('/images/dalgona.jpeg');
   background-position: center;
   background-size: cover;
   margin-top: 0;

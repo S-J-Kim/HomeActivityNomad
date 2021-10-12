@@ -20,7 +20,7 @@ const TasteCheck = (props) => {
         <CurationDetailHeader
           item={{ objectName: '성향조사 1', type: 'Food' }}
         />
-        <ObjectImg src={`${process.env.PUBLIC_URL}/images/galbi.jpeg`} />
+        <ObjectImg src={`/images/galbi.jpeg`} />
         <RatingContainer>
           <BiDislike size={32} color="red" />
           <RatingButtonContainer>

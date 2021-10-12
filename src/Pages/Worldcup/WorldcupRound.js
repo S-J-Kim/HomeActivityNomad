@@ -8,12 +8,12 @@ import CurationDetailHeader from '../../Components/Curation/detail/CurationDeati
 const WorldcupRound = (props) => {
   const [worldcupItem] = useState([
     {
-      itemImage: `${process.env.PUBLIC_URL}/images/movie1.jpeg`,
+      itemImage: `/images/movie1.jpeg`,
       itemName: '명량',
       type: 'Media',
     },
     {
-      itemImage: `${process.env.PUBLIC_URL}/images/movie2.jpeg`,
+      itemImage: `/images/movie2.jpeg`,
       itemName: '신과함께: 인과 연',
       type: 'Media',
     },

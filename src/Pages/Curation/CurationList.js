@@ -12,25 +12,25 @@ const CurationList = (props) => {
     {
       id: 1,
       itemName: '막국수',
-      itemImage: process.env.PUBLIC_URL + '/images/mak.jpeg',
+      itemImage: '/images/mak.jpeg',
       type: 'Food',
     },
     {
       id: 2,
       itemName: '닭갈비',
-      itemImage: `${process.env.PUBLIC_URL}/images/galbi.jpeg`,
+      itemImage: `/images/galbi.jpeg`,
       type: 'Food',
     },
     {
       id: 3,
       itemName: '마라탕',
-      itemImage: `${process.env.PUBLIC_URL}/images/images.jpeg`,
+      itemImage: `/images/images.jpeg`,
       type: 'Food',
     },
     {
       id: 4,
       itemName: '돈가스',
-      itemImage: `${process.env.PUBLIC_URL}/images/don.jpeg`,
+      itemImage: `/images/don.jpeg`,
       type: 'Food',
     },
   ]);
