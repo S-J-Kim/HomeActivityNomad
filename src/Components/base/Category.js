@@ -86,8 +86,8 @@ const CategoryContainer = styled.div`
 `;
 
 const categories = [
-  { main: 'Food', sub: ['한식', '중식', '일식', '양식', '기타'] },
-  { main: 'Desert', sub: ['커피', '베이커리', '음료', '아이스', '기타'] },
+  // { main: 'Food', sub: ['한식', '중식', '일식', '양식', '기타'] },
+  // { main: 'Desert', sub: ['커피', '베이커리', '음료', '아이스', '기타'] },
   {
     main: 'Media',
     sub: [
@@ -101,7 +101,7 @@ const categories = [
       '기타',
     ],
   },
-  { main: 'Workout', sub: ['근력', '유산소', '요가', '스포츠', '기타'] },
+  // { main: 'Workout', sub: ['근력', '유산소', '요가', '스포츠', '기타'] },
 ];
 
 export default Category;

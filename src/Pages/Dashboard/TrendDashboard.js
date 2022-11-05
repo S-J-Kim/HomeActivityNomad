@@ -7,20 +7,20 @@ import SectionHeader from '../../Components/base/SectionTitle';
 const TrendDashboard = (props) => {
   return (
     <Fragment>
-      <Header title="집에서 뭐하니?" subTitle="홈 액티비티 트렌드 DashBoard" />
+      <Header title="집에서 뭐하니?" subTitle="OTT 트렌드 DashBoard" />
       <Container>
-        <SectionHeader mb={2}>Food Trends</SectionHeader>
+        <SectionHeader mb={2}>Netflix Trends</SectionHeader>
         <TrendPieChart />
         <SectionHeader mb={2}>Rankings</SectionHeader>
         <RankingContainer>
           <RankingBar proposition={80} color="#21f3d6">
-            곱창
+            강철부대2
           </RankingBar>
           <RankingBar proposition={65} color="#ffc33b">
-            갈비찜
+            솔로지옥
           </RankingBar>
           <RankingBar proposition={55} color="#8b22ff">
-            파스타
+            F1 : 본능의질주
           </RankingBar>
         </RankingContainer>
       </Container>

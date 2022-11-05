@@ -15,12 +15,12 @@ const ratings = [1, 2, 3, 4, 5];
 const TasteCheck = (props) => {
   return (
     <Fragment>
-      <Header title="너의 취향은?" subTitle="당신의 취향을 알아봅시다" />
+      <Header title="너의 취향은?" subTitle="당신의 OTT 취향을 알아봅시다" />
       <Container>
         <CurationDetailHeader
-          item={{ objectName: '성향조사 1', type: 'Food' }}
+          item={{ objectName: '성향조사 1', type: 'Netflix' }}
         />
-        <ObjectImg src={`/images/galbi.jpeg`} />
+        <ObjectImg src={`/images/media/f1.webp`} />
         <RatingContainer>
           <BiDislike size={32} color="red" />
           <RatingButtonContainer>

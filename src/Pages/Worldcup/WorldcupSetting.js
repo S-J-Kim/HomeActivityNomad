@@ -18,11 +18,11 @@ const WorldcupSetting = (props) => {
 
   return (
     <Fragment>
-      <Header title="집콕 월드컵" subTitle="홈 액티비티 월드컵" />
+      <Header title="집콕 월드컵" subTitle="OTT Content 월드컵" />
       <Container style={{ flex: 1 }}>
         <SectionHeader>월드컵 설정하기</SectionHeader>
         <Fragment>
-          <ContainerLabel>
+          {/* <ContainerLabel>
             카테고리 선택
             <CategoryButtonContainer>
               {categories.map((el, idx) => {
@@ -40,7 +40,7 @@ const WorldcupSetting = (props) => {
                 );
               })}
             </CategoryButtonContainer>
-          </ContainerLabel>
+          </ContainerLabel> */}
           <ContainerLabel>
             라운드 선택
             <CategoryButtonContainer>

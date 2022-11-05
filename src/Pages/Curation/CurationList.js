@@ -11,33 +11,33 @@ const CurationList = (props) => {
   const [items, setItems] = useState([
     {
       id: 1,
-      itemName: '막국수',
-      itemImage: '/images/mak.jpeg',
-      type: 'Food',
+      itemName: 'F1 : 본능의질주',
+      itemImage: '/images/media/f1.webp',
+      type: '넷플릭스',
     },
     {
       id: 2,
-      itemName: '닭갈비',
-      itemImage: `/images/galbi.jpeg`,
-      type: 'Food',
+      itemName: '프렌즈',
+      itemImage: `/images/media/friends.jpeg`,
+      type: '넷플릭스',
     },
     {
       id: 3,
-      itemName: '마라탕',
-      itemImage: `/images/images.jpeg`,
-      type: 'Food',
+      itemName: '지옥',
+      itemImage: `/images/media/hellbound.jpg`,
+      type: '넷플릭스',
     },
     {
       id: 4,
-      itemName: '돈가스',
-      itemImage: `/images/don.jpeg`,
-      type: 'Food',
+      itemName: '굿 플레이스',
+      itemImage: `/images/media/goodplace.jpeg`,
+      type: '넷플릭스',
     },
   ]);
 
   return (
     <Fragment>
-      <Header title="이건 어떠니?" subTitle="홈 액티비티 트렌드 Curation" />
+      <Header title="이건 어떠니?" subTitle="OTT 트렌드 Curation" />
       <Container>
         <Category onCategoryChange={setMainCategory} />
         {mainCategory && (
