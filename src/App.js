@@ -24,11 +24,11 @@ const App = (props) => {
           path="/curation"
           render={(props) => <CurationRouter {...props} />}
         />
-        <Route path="/story" render={(props) => <StoryRouter {...props} />} />
+        {/* <Route path="/story" render={(props) => <StoryRouter {...props} />} />
         <Route
           path="/worldcup"
           render={(props) => <WorldcupRouter {...props} />}
-        />
+        /> */}
         <Route
           path="/taste"
           render={(props) => <TasteCheckRouter {...props} />}

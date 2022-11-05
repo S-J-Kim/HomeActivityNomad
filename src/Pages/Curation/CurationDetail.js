@@ -10,25 +10,16 @@ import RelatedStories from '../../Components/Curation/detail/RelatedStories';
 const CurationDetail = (props) => {
   const { cat, pk } = useParams();
   const [item, setItem] = useState({
-    objectName: '막국수',
+    objectName: '미디어이름 미디어이름',
     objectImage: `/images/mak.jpeg`,
-    desc: '메밀국수를 김칫국물에 말아먹는 음식. 메밀국수를 김칫국물에 말아먹는 음식. 강원도 향토음식의 하나이다.',
+    desc: '대충 미디어에 대한 설명 와랄라 와랄라 와랄라 엇쩌고 저쩌고 후루룩 짭짭',
     type: cat,
     relatedInfo: {
-      ingredients: ['무', '양파', '키위', '닭가슴살 캔', '땅콩', '메밀면'],
-      directions: [
-        '분량의 재료를 섞어 비빔장을 만듭니다. 무는 강판에 갈고 양파, 키위도 갈아서 넣어줍니다',
-        '땅콩은 적당히 부숴둡니다',
-        '메밀국수를 삶은후 찬물에서 재빨리 헹구어 주세요',
-        '이제 넓은 접시에 준비한 메밀국수. 고명. 양념을 담아내시면 끝.',
-      ],
+      genre: '장르',
+      released: '2021.01.01',
+      director: '감독이름 누구',
+      actors: ['배우1', '배우2'],
     },
-    relatedStories: [
-      { thumbnail: '', author: 'freind1' },
-      { thumbnail: '', author: 'freind1' },
-      { thumbnail: '', author: 'freind1' },
-      { thumbnail: '', author: 'freind1' },
-    ],
   });
 
   return (
@@ -36,10 +27,10 @@ const CurationDetail = (props) => {
       <Header title="이건 어떠니?" subTitle="홈 액티비티 트렌드 Curation" />
       <Container>
         <CurationDetailHeader item={item} />
-        <CurationObjectImage src={item.objectImage} />
-        <CurationObjectDesc>{item.desc}</CurationObjectDesc>
+        {/* <CurationObjectImage src={item.objectImage} />
+        <CurationObjectDesc>{item.desc}</CurationObjectDesc> */}
         <CurationDetailRelatedInfo item={item} />
-        <RelatedStories stories={item.relatedStories} />
+        {/* <RelatedStories stories={item.relatedStories} /> */}
       </Container>
     </Fragment>
   );
