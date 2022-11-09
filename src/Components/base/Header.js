@@ -52,3 +52,4 @@ const SubTitle = styled.div`
 `;
 
 export default Header;
+export { ProfileImage };

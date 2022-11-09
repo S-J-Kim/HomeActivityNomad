@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import CategoryTag from './CategoryTag';
+import LikeButton from './LikeButton';
 
 const CurationItem = (props) => {
   const { items, match } = props;
@@ -26,7 +26,7 @@ const SingleCurationItem = ({ item }) => {
     <ItemContainer>
       <ItemImage src={itemImage} />
       <ItemName>{itemName}</ItemName>
-      <CategoryTag type={type} />
+      <LikeButton type={type} />
     </ItemContainer>
   );
 };

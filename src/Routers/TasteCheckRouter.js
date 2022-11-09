@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
-import TasteCheck from '../Pages/TasteCheck/TasteCheck';
+import TasteCheckType1 from '../Pages/TasteCheck/TasteCheckType1';
 
 const TasteCheckRouter = (props) => {
   const { match } = props;
@@ -8,7 +8,7 @@ const TasteCheckRouter = (props) => {
     <Fragment>
       <Route
         path={`${match.url}/step1`}
-        render={(props) => <TasteCheck {...props} />}
+        render={(props) => <TasteCheckType1 {...props} />}
       />
     </Fragment>
   );

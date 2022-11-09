@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
 import Container from '../../Components/base/Container';
-import CategoryTag from '../../Components/Curation/CategoryTag';
+import LikeButton from '../../Components/Curation/LikeButton';
 import { BsHeart, BsShareFill } from 'react-icons/bs';
 import StoryHeader from '../../Components/Story/list/StoryHeader';
 import { AiOutlineComment } from 'react-icons/ai';
@@ -28,7 +28,7 @@ const StoryList = (props) => {
               <AuthorNickname>{stories.nickname}</AuthorNickname>
             </StoryAuthorContainer>
             <StoryPreview>{stories.content}</StoryPreview>
-            <CategoryTag type={stories.type} />
+            <LikeButton type={stories.type} />
           </StoryInfoContainer>
           <StoryButtonContainer>
             <BsHeart size={30} color={'red'} />

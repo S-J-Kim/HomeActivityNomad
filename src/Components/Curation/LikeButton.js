@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const CategoryTag = (props) => {
+const LikeButton = (props) => {
   const { type } = props;
   const [liked, setLiked] = useState(false);
 
@@ -42,4 +42,4 @@ const LikeButtonContainer = styled.button`
   transition: 0.12s ease-in all;
 `;
 
-export default CategoryTag;
+export default LikeButton;
