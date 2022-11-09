@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 import TasteCheckTemplate from './TasteCheckTemplate';
 
-const TasteCheckType1 = (props) => {
+const TasteCheckType2 = (props) => {
   const [OTTContents, setOTTContents] = useState([
     {
-      name: '넷플릭스',
+      name: '배우1',
       image: `/images/OTTlogos/netflix.png`,
     },
     {
-      name: '티빙',
+      name: '배우2',
       image: `/images/OTTlogos/tving.png`,
     },
     {
-      name: '왓챠플레이',
+      name: '배우3',
       image: `/images/OTTlogos/watcha.jpeg`,
     },
     {
-      name: '웨이브',
+      name: '배우4',
       image: `/images/OTTlogos/wavve.jpeg`,
     },
   ]);
 
   return (
     <TasteCheckTemplate
-      pageTitle="성향조사 1: 구독중인 OTT 선택"
-      pageType="OTT"
+      pageTitle="성향조사 2: 좋아하는 배우 선택"
+      pageType="Actors"
       pageData={OTTContents}
-      nextUrl="/taste/step2"
+      nextUrl="/taste/step3"
     />
   );
 };
 
-export default TasteCheckType1;
+export default TasteCheckType2;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SelectionCompleteButton = ({ visible }) => {
   return (
-    <CompleteButton type="button" visible={visible}>
+    <CompleteButton type="submit" visible={visible}>
       선택완료
     </CompleteButton>
   );

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import LikeButton from '../LikeButton';
+import React from 'react';
 import styled from 'styled-components';
-import { useParams } from 'react-router';
+import CategoryTag from '../../base/CategoryTag';
 
 const CurationDetailHeader = ({ item }) => {
   const { objectName, type } = item;
@@ -9,7 +8,7 @@ const CurationDetailHeader = ({ item }) => {
   return (
     <HeaderContainer>
       <CurationObjectName>{objectName}</CurationObjectName>
-      <LikeButton type={type} />
+      <CategoryTag type={type} />
     </HeaderContainer>
   );
 };
