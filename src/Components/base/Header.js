@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 import styled from 'styled-components';
 
 const Header = (props) => {
@@ -8,7 +9,9 @@ const Header = (props) => {
     <HeaderContainer>
       <TitleContainer>
         <Title>{title}</Title>
-        <ProfileImage src={'/images/base/defaultprofileimage.svg'} />
+        <Link to="/mypage">
+          <ProfileImage src={'/images/base/defaultprofileimage.svg'} />
+        </Link>
       </TitleContainer>
       <SubTitle>{subTitle}</SubTitle>
     </HeaderContainer>

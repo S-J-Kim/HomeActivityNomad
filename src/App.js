@@ -9,6 +9,7 @@ import WorldcupRouter from './Routers/WorldcupRouter';
 import TasteCheckRouter from './Routers/TasteCheckRouter';
 import TrendDashboard from './Pages/Dashboard/TrendDashboard';
 import Footer from './Components/base/Footer';
+import MyPage from './Pages/MyPage/MyPage';
 
 const App = (props) => {
   return (
@@ -37,6 +38,7 @@ const App = (props) => {
           path="/trend"
           render={(props) => <TrendDashboard {...props} />}
         />
+        <Route path="/mypage" render={(props) => <MyPage {...props} />} />
       </Switch>
       <Footer />
     </Fragment>
