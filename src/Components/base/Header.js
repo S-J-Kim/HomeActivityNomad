@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+import React from 'react';
+import { useHistory } from 'react-router';
 import styled from 'styled-components';
+import useUserContext from '../../hooks/useUserContext';
 
 const Header = (props) => {
   const { title, subTitle } = props;
+  const { getAccessToken } = useUserContext();
+  const history = useHistory();
+
+  const handleProfileImageClick = () => {
+    history.push(getAccessToken() ? '/mypage' : '/signin');
+  };
 
   return (
     <HeaderContainer>
       <TitleContainer>
         <Title>{title}</Title>
-        <Link to="/mypage">
-          <ProfileImage src={'/images/base/defaultprofileimage.svg'} />
-        </Link>
+        <ProfileImage
+          src={'/images/base/defaultprofileimage.svg'}
+          onClick={handleProfileImageClick}
+        />
       </TitleContainer>
       <SubTitle>{subTitle}</SubTitle>
     </HeaderContainer>

@@ -7,12 +7,31 @@ const useUserContext = () => {
   const {
     accessToken,
     refreshToken,
+    userId,
     setAccessToken,
     setRefreshToken,
     setUserId,
   } = useContext(UserContext);
   const history = useHistory();
-  const { signupReq, loginReq } = ApiFetchers;
+  const { tokenRefreshReq, signupReq, loginReq } = ApiFetchers;
+
+  const getAccessToken = () => accessToken;
+  const getRefreshToken = () => refreshToken;
+  const getUserId = () => userId;
+
+  const isLoggedIn = () => !!getAccessToken();
+  const isTokenAvailable = () => {
+    tokenRefreshReq({ accessToken })
+      .then(({ result }) => {
+        setAccessToken(result.accessToken);
+        setRefreshToken(result.refreshToken);
+      })
+      .catch((err) => {
+        if (!accessToken) {
+          alert('로그인이 필요합니다!');
+        }
+      });
+  };
 
   const signup = (data) => {
     signupReq(data)
@@ -43,8 +62,8 @@ const useUserContext = () => {
       .then((res) => {
         console.log(res);
 
-        setAccessToken(res.data.accessToken);
-        setRefreshToken(res.data.refreshToken);
+        setAccessToken(res.data.result.accessToken);
+        setRefreshToken(res.data.result.refreshToken);
         setUserId(res.data.result.userId);
         history.push('/trend');
       })
@@ -54,7 +73,7 @@ const useUserContext = () => {
       });
   };
 
-  return { signup, login };
+  return { signup, login, getAccessToken, getRefreshToken, getUserId };
 };
 
 export default useUserContext;

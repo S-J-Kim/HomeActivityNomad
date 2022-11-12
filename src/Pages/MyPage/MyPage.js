@@ -4,8 +4,10 @@ import Container from '../../Components/base/Container';
 import Header, { ProfileImage } from '../../Components/base/Header';
 import SectionHeader from '../../Components/base/SectionTitle';
 import CurationItem from '../../Components/Curation/CurationItem';
+import useUserContext from '../../hooks/useUserContext';
 
 const MyPage = (props) => {
+  const { getUserId, getAccessToken } = useUserContext();
   const [items, setItems] = useState([
     {
       id: 1,
@@ -39,7 +41,7 @@ const MyPage = (props) => {
       <Container>
         <UserInfoContainer>
           <MypageProfileImage src={'/images/base/defaultprofileimage.svg'} />
-          <MyName>OTT다모아</MyName>
+          <MyName>{getUserId()}</MyName>
         </UserInfoContainer>
         <SectionHeader>내가 좋아요 누른 미디어</SectionHeader>
         <CurationItem items={items} />

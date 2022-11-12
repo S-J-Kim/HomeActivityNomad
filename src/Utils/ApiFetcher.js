@@ -33,6 +33,14 @@ const getConfig = (method, url, data, accessToken) => {
   };
 };
 
+const tokenRefreshReq = async (data) => {
+  const res = await axios(
+    getConfig(ApiMethod['post'], ApiUrlMap['tokenReisuue'], data, '')
+  );
+
+  return res;
+};
+
 const signupReq = async (data) => {
   try {
     const res = await axios(
@@ -60,6 +68,7 @@ const loginReq = async (data) => {
 };
 
 export const ApiFetchers = {
+  tokenRefreshReq,
   signupReq,
   loginReq,
 };
