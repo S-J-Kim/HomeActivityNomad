@@ -4,9 +4,16 @@ import { Form, Button, Input, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined, HomeTwoTone } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
 import Container from '../Components/base/Container';
+import useUserContext from '../hooks/useUserContext';
+import { useForm } from 'antd/lib/form/Form';
 
 const Signin = (props) => {
-  const history = useHistory();
+  const { login } = useUserContext();
+  const [form] = useForm();
+
+  const handleLoginButtonClick = ({ userId, password }) => {
+    login({ userId, password });
+  };
 
   return (
     <SigninContainer style={{ height: '100v' }}>
@@ -17,10 +24,11 @@ const Signin = (props) => {
         initialValues={{ remember: true }}
         size="large"
         requiredMark="optional"
+        onFinish={handleLoginButtonClick}
       >
         <Form.Item
-          name="username"
-          label="Username"
+          name="userId"
+          label="userId"
           required
           rules={[{ message: 'Please input your Username!' }]}
         >
@@ -56,7 +64,6 @@ const Signin = (props) => {
             type="primary"
             htmlType="submit"
             className="login-form-button"
-            onClick={() => history.push('/trend')}
             block
           >
             Log in

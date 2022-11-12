@@ -4,12 +4,15 @@ import App from './App';
 import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './Components/base/Footer';
+import UserContextProvider from './Context/UserContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <UserContextProvider>
+      <Router>
+        <App />
+      </Router>
+    </UserContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

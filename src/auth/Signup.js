@@ -12,6 +12,8 @@ import {
 } from 'antd';
 import Container from '../Components/base/Container';
 import { useHistory } from 'react-router-dom';
+import { ApiFetchers } from '../Utils/ApiFetcher';
+import useUserContext from '../hooks/useUserContext';
 
 const { Option } = Select;
 const residences = [
@@ -82,10 +84,14 @@ const tailFormItemLayout = {
 const Signup = () => {
   const [form] = Form.useForm();
   const history = useHistory();
+  const { signup } = useUserContext();
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
-    history.push('/taste/step1');
+    signup({
+      userId: values.email,
+      password: values.password,
+    });
   };
 
   const prefixSelector = (
