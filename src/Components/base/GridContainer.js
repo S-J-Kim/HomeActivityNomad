@@ -2,15 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 
-const GridContainer = ({ children, nextUrl }) => {
-  const history = useHistory();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    history.push(nextUrl);
-  };
-
-  return <InnerContainer onSubmit={handleSubmit}>{children}</InnerContainer>;
+const GridContainer = ({ children, onSubmit }) => {
+  return <InnerContainer onSubmit={onSubmit}>{children}</InnerContainer>;
 };
 
 const InnerContainer = styled.form`

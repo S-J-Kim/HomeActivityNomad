@@ -1,39 +1,47 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Container from '../../Components/base/Container';
 import Header, { ProfileImage } from '../../Components/base/Header';
 import SectionHeader from '../../Components/base/SectionTitle';
 import CurationItem from '../../Components/Curation/CurationItem';
 import useUserContext from '../../hooks/useUserContext';
+import { ApiFetchers } from '../../Utils/ApiFetcher';
 
 const MyPage = (props) => {
   const { getUserId, getAccessToken } = useUserContext();
+  const { likedContentListReq } = ApiFetchers;
   const [items, setItems] = useState([
     {
-      id: 1,
-      itemName: 'F1 : 본능의질주',
-      itemImage: '/images/media/f1.webp',
-      type: '넷플릭스',
+      mediaId: 1,
+      name: 'F1 : 본능의질주',
+      imageUrl: '/images/media/f1.webp',
+      platformList: ['netflix'],
     },
     {
-      id: 2,
-      itemName: '프렌즈',
-      itemImage: `/images/media/friends.jpeg`,
-      type: '넷플릭스',
+      mediaId: 2,
+      name: '프렌즈',
+      imageUrl: `/images/media/friends.jpeg`,
+      platformList: ['netflix'],
     },
     {
-      id: 3,
-      itemName: '지옥',
-      itemImage: `/images/media/hellbound.jpg`,
-      type: '넷플릭스',
+      mediaId: 3,
+      name: '지옥',
+      imageUrl: `/images/media/hellbound.jpg`,
+      platformList: ['netflix'],
     },
     {
-      id: 4,
-      itemName: '굿 플레이스',
-      itemImage: `/images/media/goodplace.jpeg`,
-      type: '넷플릭스',
+      mediaId: 4,
+      name: '굿 플레이스',
+      imageUrl: `/images/media/goodplace.jpeg`,
+      platformList: ['netflix'],
     },
   ]);
+
+  useEffect(() => {
+    likedContentListReq(getAccessToken()).then(({ data }) => {
+      setItems(data.result);
+    });
+  }, []);
 
   return (
     <Fragment>

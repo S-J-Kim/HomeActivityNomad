@@ -31,13 +31,13 @@ const useUserContext = () => {
           alert('로그인이 필요합니다!');
         }
       });
+
+    return true;
   };
 
   const signup = (data) => {
     signupReq(data)
       .then((res) => {
-        history.push('/taste/step1');
-
         if (res.status === 200) {
           return res;
         }
@@ -45,8 +45,9 @@ const useUserContext = () => {
       .then((res) => {
         loginReq(data)
           .then((res) => {
-            setAccessToken(res.result.accessToken);
-            setRefreshToken(res.result.refreshToken);
+            setAccessToken(res.data.result.accessToken);
+            setRefreshToken(res.data.result.refreshToken);
+            history.push('/taste/step1');
           })
           .catch((err) => console.log(err));
       });
@@ -73,7 +74,14 @@ const useUserContext = () => {
       });
   };
 
-  return { signup, login, getAccessToken, getRefreshToken, getUserId };
+  return {
+    signup,
+    login,
+    isTokenAvailable,
+    getAccessToken,
+    getRefreshToken,
+    getUserId,
+  };
 };
 
 export default useUserContext;

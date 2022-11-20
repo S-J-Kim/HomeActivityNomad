@@ -69,7 +69,11 @@ const Signin = (props) => {
             Log in
           </Button>
         </Form.Item>
-        <Button type="default" block onClick={() => history.push('/signup')}>
+        <Button
+          type="default"
+          block
+          onClick={() => window.history.push('/signup')}
+        >
           Signup
         </Button>
       </Form>

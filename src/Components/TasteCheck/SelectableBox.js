@@ -1,19 +1,25 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-const SelectableBox = ({ content, onChange }) => {
-  const { name, image } = content;
+const ApiRequestIdMap = {
+  OTT: 'platformId',
+  Actors: 'actorId',
+  Genre: 'genreId',
+};
+
+const SelectableBox = ({ content, onChange, pageType }) => {
+  const { name, profileImageUrl } = content;
 
   return (
     <Fragment>
       <BoxConainerInput
         type="checkbox"
         id={name}
-        value={name}
+        value={content[ApiRequestIdMap[pageType]]}
         onChange={onChange}
       />
       <BoxContainer htmlFor={name}>
-        <BoxItemImage src={image} />
+        <BoxItemImage src={profileImageUrl} />
         <BoxItemDesc>{name}</BoxItemDesc>
       </BoxContainer>
     </Fragment>

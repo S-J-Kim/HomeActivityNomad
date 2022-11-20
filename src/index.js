@@ -5,13 +5,16 @@ import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Footer from './Components/base/Footer';
 import UserContextProvider from './Context/UserContext';
+import TasteCheckContextProvider from './Context/TasteCheckContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
-      <Router>
-        <App />
-      </Router>
+      <TasteCheckContextProvider>
+        <Router>
+          <App />
+        </Router>
+      </TasteCheckContextProvider>
     </UserContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

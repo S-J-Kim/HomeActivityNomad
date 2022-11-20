@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import useUserContext from '../../hooks/useUserContext';
+import { ApiFetchers } from '../../Utils/ApiFetcher';
 
-const LikeButton = (props) => {
-  const { type } = props;
-  const [liked, setLiked] = useState(false);
+const LikeButton = ({ likeStatus, pk }) => {
+  const [liked, setLiked] = useState(likeStatus);
+  const { getAccessToken } = useUserContext();
+  const { likeContentReq } = ApiFetchers;
 
   const handleLikeButtonClick = () => {
     setLiked(!liked);
+
+    if (liked) {
+      likeContentReq({
+        method: 'delete',
+        data: { mediaPk: pk },
+        token: getAccessToken(),
+      }).then((res) => {});
+    } else {
+      likeContentReq({
+        method: 'post',
+        data: { mediaPk: pk },
+        token: getAccessToken(),
+      }).then((res) => {});
+    }
   };
+
+  useEffect(() => {
+    setLiked(likeStatus);
+  }, [likeStatus]);
 
   return (
     <LikeButtonContainer liked={liked} onClick={handleLikeButtonClick}>

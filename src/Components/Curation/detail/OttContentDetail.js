@@ -3,34 +3,28 @@ import styled from 'styled-components';
 import ShadowedContainer from './ShadowedContainer';
 
 const OttContentDetail = ({ item }) => {
-  const { genre, released, director, actors } = item.relatedInfo;
+  const { name, imageUrl, description, platformList, genreList, actorList } =
+    item;
 
   return (
     <ShadowedContainer>
       <DetailContainerHeader>
-        {item.objectName}
-        <OttKindImage alt={item.type} />
+        {name}
+        <OttKindImage alt={platformList[0]} />
       </DetailContainerHeader>
       <ContentInfoContainer>
-        <ContentMainImmage src={item.objectImage} alt={item.objectName} />
+        <ContentMainImmage src={imageUrl} alt={name} />
         <div>
           <ContentInfoRowContainer>
             <ContentInfoRowWithLable>
               <ContentInfoRowLable>장르</ContentInfoRowLable>
-              <ContentInfoRowValue>{genre}</ContentInfoRowValue>
+              <ContentInfoRowValue>{genreList[0]}</ContentInfoRowValue>
             </ContentInfoRowWithLable>
+
             <ContentInfoRowWithLable>
-              <ContentInfoRowLable>개봉</ContentInfoRowLable>
-              <ContentInfoRowValue>{released}</ContentInfoRowValue>
-            </ContentInfoRowWithLable>
-            <ContentInfoRowWithLable>
-              <ContentInfoRowLable>감독</ContentInfoRowLable>
-              <ContentInfoRowValue>{director}</ContentInfoRowValue>
-            </ContentInfoRowWithLable>
-            <ContentInfoRowWithLable>
-              <ContentInfoRowLable>장르</ContentInfoRowLable>
+              <ContentInfoRowLable>배우</ContentInfoRowLable>
               <ContentInfoRowValue>
-                {actors.map((name) => {
+                {actorList.map((name) => {
                   return <div>{name}</div>;
                 })}
               </ContentInfoRowValue>
@@ -38,7 +32,7 @@ const OttContentDetail = ({ item }) => {
           </ContentInfoRowContainer>
         </div>
       </ContentInfoContainer>
-      <div>{item.desc}</div>
+      <div>{description}</div>
     </ShadowedContainer>
   );
 };

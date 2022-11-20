@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import TasteCheckTemplate from './TasteCheckTemplate';
+import useUserContext from '../../hooks/useUserContext';
+import { ApiFetchers } from '../../Utils/ApiFetcher';
+import { TasteCheckContext } from '../../Context/TasteCheckContext';
 
 const TasteCheckType1 = (props) => {
-  const [OTTContents, setOTTContents] = useState([
-    {
-      name: '넷플릭스',
-      image: `/images/OTTlogos/netflix.png`,
-    },
-    {
-      name: '티빙',
-      image: `/images/OTTlogos/tving.png`,
-    },
-    {
-      name: '왓챠플레이',
-      image: `/images/OTTlogos/watcha.jpeg`,
-    },
-    {
-      name: '웨이브',
-      image: `/images/OTTlogos/wavve.jpeg`,
-    },
-  ]);
+  const { getAccessToken, isTokenAvailable } = useUserContext();
+  const { tasteCheckReq } = ApiFetchers;
+  const { tasteCheckData, setTasteCheckData } = useContext(TasteCheckContext);
+
+  useEffect(() => {
+    if (isTokenAvailable()) {
+      tasteCheckReq({
+        method: 'get',
+        data: null,
+        token: getAccessToken(),
+      }).then(({ data }) => {
+        setTasteCheckData(data.result);
+      });
+    }
+  }, []);
 
   return (
     <TasteCheckTemplate
       pageTitle="성향조사 1: 구독중인 OTT 선택"
       pageType="OTT"
-      pageData={OTTContents}
+      pageData={tasteCheckData.platformList}
       nextUrl="/taste/step2"
     />
   );

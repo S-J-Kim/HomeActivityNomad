@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import CategoryTag from '../../base/CategoryTag';
-import LikeButton from '../LikeButton';
+import CategoryTag from '../base/CategoryTag';
 
-const CurationDetailHeader = ({ item, pk }) => {
-  const { name, likeStatus } = item;
-
+const TasteCheckHeader = ({ item }) => {
+  const { title, type } = item;
   return (
     <HeaderContainer>
-      <CurationObjectName>{name}</CurationObjectName>
-      <LikeButton likeStatus={likeStatus} pk={pk} />
+      <CurationObjectName>{title}</CurationObjectName>
+      <CategoryTag type={type} />
     </HeaderContainer>
   );
 };
@@ -28,4 +26,4 @@ const CurationObjectName = styled.h1`
   margin: 1.8rem 0;
 `;
 
-export default CurationDetailHeader;
+export default TasteCheckHeader;

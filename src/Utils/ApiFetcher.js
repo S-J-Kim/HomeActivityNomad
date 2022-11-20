@@ -8,8 +8,8 @@ const ApiUrlMap = {
   signup: '/auth/sign-up',
   login: '/auth/login',
   tokenReisuue: '/auth/token-reissue',
-  like: 'member/like',
-  tasteCheck: 'member/poll',
+  like: '/member/like',
+  tasteCheck: '/member/poll',
   media: '/media/',
   curation: '/media/recommand',
 };
@@ -67,8 +67,53 @@ const loginReq = async (data) => {
   return res;
 };
 
+const tasteCheckReq = async ({ method, data, token }) => {
+  const res = await axios(
+    getConfig(ApiMethod[method], ApiUrlMap['tasteCheck'], data, token)
+  );
+
+  return res;
+};
+
+const curationListReq = async (token) => {
+  const res = await axios(
+    getConfig(ApiMethod['get'], ApiUrlMap['curation'], null, token)
+  );
+
+  return res;
+};
+
+const likedContentListReq = async (token) => {
+  const res = await axios(
+    getConfig(ApiMethod['get'], ApiUrlMap['like'], null, token)
+  );
+
+  return res;
+};
+
+const curationDetailReq = async ({ mediaId, token }) => {
+  const res = await axios(
+    getConfig(ApiMethod['get'], `${ApiUrlMap['media']}${mediaId}`, null, token)
+  );
+
+  return res;
+};
+
+const likeContentReq = async ({ method, data, token }) => {
+  const res = await axios(
+    getConfig(ApiMethod[method], ApiUrlMap['like'], data, token)
+  );
+
+  return res;
+};
+
 export const ApiFetchers = {
   tokenRefreshReq,
   signupReq,
   loginReq,
+  tasteCheckReq,
+  curationListReq,
+  likedContentListReq,
+  curationDetailReq,
+  likeContentReq,
 };
