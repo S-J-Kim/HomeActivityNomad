@@ -1,6 +1,4 @@
-import React from 'react';
-import { Fragment } from 'react';
-import { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import OttContentDetail from './OttContentDetail';
 
 const CurationDetailRelatedInfo = ({ item }) => {

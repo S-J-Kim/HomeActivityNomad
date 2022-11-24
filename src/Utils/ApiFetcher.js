@@ -24,7 +24,7 @@ const ApiMethod = {
 const getConfig = (method, url, data, accessToken) => {
   return {
     method,
-    url: url,
+    url: `${serverUrl}${url}`,
     headers: {
       'Content-Type': 'application/json',
       'X-ACCESS-TOKEN': accessToken,
@@ -60,7 +60,7 @@ const loginReq = async (data) => {
     getConfig(ApiMethod['post'], ApiUrlMap['login'], data, loginAccessToken)
   );
 
-  if (res.status != 200) {
+  if (res.status !== 200) {
     console.log(res);
   }
 

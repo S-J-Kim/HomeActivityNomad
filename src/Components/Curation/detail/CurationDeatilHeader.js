@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import CategoryTag from '../../base/CategoryTag';
 import LikeButton from '../LikeButton';
 
 const CurationDetailHeader = ({ item, pk }) => {

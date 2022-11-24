@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import Header from '../../Components/base/Header';
-import Container from '../../Components/base/Container';
-import SectionHeader from '../../Components/base/SectionTitle';
 import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 import {
+  CategoryButton,
   CategoryButtonInput,
   CategoryContainer,
-  CategoryButton,
 } from '../../Components/base/Category';
+import Container from '../../Components/base/Container';
+import Header from '../../Components/base/Header';
+import SectionHeader from '../../Components/base/SectionTitle';
 
 const categories = ['Food', 'Dessert', 'Media', 'Workout'];
 const rounds = ['8강', '16강', '32강', '64강'];

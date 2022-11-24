@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import Category from '../../Components/base/Category';
-import Header from '../../Components/base/Header';
 import Container from '../../Components/base/Container';
+import Header from '../../Components/base/Header';
 import SectionHeader from '../../Components/base/SectionTitle';
 import CurationItem from '../../Components/Curation/CurationItem';
 import useUserContext from '../../hooks/useUserContext';

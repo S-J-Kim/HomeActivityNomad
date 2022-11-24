@@ -1,18 +1,7 @@
+import { Button, Checkbox, Form, Input, Select } from 'antd';
 import React, { useState } from 'react';
-import {
-  Form,
-  Input,
-  Cascader,
-  Select,
-  Row,
-  Col,
-  Checkbox,
-  Button,
-  AutoComplete,
-} from 'antd';
-import Container from '../Components/base/Container';
 import { useHistory } from 'react-router-dom';
-import { ApiFetchers } from '../Utils/ApiFetcher';
+import Container from '../Components/base/Container';
 import useUserContext from '../hooks/useUserContext';
 
 const { Option } = Select;

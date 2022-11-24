@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
+import Footer from './Components/base/Footer';
+import TrendDashboard from './Pages/Dashboard/TrendDashboard';
+import MyPage from './Pages/MyPage/MyPage';
 import AuthRouter from './Routers/AuthRouter';
 import CurationRouter from './Routers/CurationRouter';
-import reset from 'styled-reset';
-import StoryRouter from './Routers/StoryRouter';
-import WorldcupRouter from './Routers/WorldcupRouter';
 import TasteCheckRouter from './Routers/TasteCheckRouter';
-import TrendDashboard from './Pages/Dashboard/TrendDashboard';
-import Footer from './Components/base/Footer';
-import MyPage from './Pages/MyPage/MyPage';
 
 const App = (props) => {
   return (

@@ -1,14 +1,13 @@
 import React, { Fragment, useState } from 'react';
+import { useHistory, useLocation } from 'react-router';
 import Container from '../../Components/base/Container';
 import GridContainer from '../../Components/base/GridContainer';
 import Header from '../../Components/base/Header';
-import CurationDetailHeader from '../../Components/Curation/detail/CurationDeatilHeader';
 import SelectableBox from '../../Components/TasteCheck/SelectableBox';
 import SelectionCompleteButton from '../../Components/TasteCheck/SelectionCompleteButton';
-import { useHistory, useLocation } from 'react-router';
-import { ApiFetchers } from '../../Utils/ApiFetcher';
-import useUserContext from '../../hooks/useUserContext';
 import TasteCheckHeader from '../../Components/TasteCheck/TasteCheckHeader';
+import useUserContext from '../../hooks/useUserContext';
+import { ApiFetchers } from '../../Utils/ApiFetcher';
 
 const ApiRequestKeyMap = {
   OTT: 'platformList',

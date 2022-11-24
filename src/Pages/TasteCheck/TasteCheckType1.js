@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
-import { useHistory } from 'react-router';
-import TasteCheckTemplate from './TasteCheckTemplate';
+import React, { useContext, useEffect } from 'react';
+import { TasteCheckContext } from '../../Context/TasteCheckContext';
 import useUserContext from '../../hooks/useUserContext';
 import { ApiFetchers } from '../../Utils/ApiFetcher';
-import { TasteCheckContext } from '../../Context/TasteCheckContext';
+import TasteCheckTemplate from './TasteCheckTemplate';
 
 const TasteCheckType1 = (props) => {
   const { getAccessToken, isTokenAvailable } = useUserContext();

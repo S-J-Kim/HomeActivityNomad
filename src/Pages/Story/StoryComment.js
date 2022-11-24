@@ -2,8 +2,8 @@ import React, { Fragment, useState } from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import styled from 'styled-components';
 import Container from '../../Components/base/Container';
-import CommentHeader from '../../Components/Story/comment/CommentHeader';
 import ShadowedContainer from '../../Components/Curation/detail/ShadowedContainer';
+import CommentHeader from '../../Components/Story/comment/CommentHeader';
 
 const StoryComment = (props) => {
   const [comments, setComments] = useState([

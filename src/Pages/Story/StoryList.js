@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
+import { AiOutlineComment } from 'react-icons/ai';
+import { BsHeart, BsShareFill } from 'react-icons/bs';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from '../../Components/base/Container';
 import LikeButton from '../../Components/Curation/LikeButton';
-import { BsHeart, BsShareFill } from 'react-icons/bs';
 import StoryHeader from '../../Components/Story/list/StoryHeader';
-import { AiOutlineComment } from 'react-icons/ai';
-import { useHistory } from 'react-router-dom';
 
 const StoryList = (props) => {
   const [stories, setStories] = useState({

@@ -1,14 +1,12 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import styled from 'styled-components';
-import Header from '../../Components/base/Header';
 import Container from '../../Components/base/Container';
+import Header from '../../Components/base/Header';
 import CurationDetailHeader from '../../Components/Curation/detail/CurationDeatilHeader';
-import CurationDetailRelatedInfo from '../../Components/Curation/detail/CurationDetailRelatedInfo';
-import RelatedStories from '../../Components/Curation/detail/RelatedStories';
+import OttContentDetail from '../../Components/Curation/detail/OttContentDetail';
 import useUserContext from '../../hooks/useUserContext';
 import { ApiFetchers } from '../../Utils/ApiFetcher';
-import OttContentDetail from '../../Components/Curation/detail/OttContentDetail';
 
 const CurationDetail = (props) => {
   const { cat, pk } = useParams();

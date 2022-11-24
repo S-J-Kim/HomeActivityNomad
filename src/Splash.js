@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
-import { Button, Space } from 'antd';
 import { HomeTwoTone } from '@ant-design/icons';
-import './index.css';
+import { Button, Space } from 'antd';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 import Container from './Components/base/Container';
+import './index.css';
 
 const Splash = (props) => {
   const history = useHistory();

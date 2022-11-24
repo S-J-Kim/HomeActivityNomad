@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
 import styled from 'styled-components';
 
 const CommentHeader = (props) => {

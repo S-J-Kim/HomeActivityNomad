@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Footer from './Components/base/Footer';
-import UserContextProvider from './Context/UserContext';
+import App from './App';
 import TasteCheckContextProvider from './Context/TasteCheckContext';
+import UserContextProvider from './Context/UserContext';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,9 +1,8 @@
 import React from 'react';
+import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import LikeButton from './LikeButton';
 import CategoryTag from '../base/CategoryTag';
-import { useLocation } from 'react-router';
 
 const CurationItem = (props) => {
   const { items, match } = props;
