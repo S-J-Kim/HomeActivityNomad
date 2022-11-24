@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { useHistory } from 'react-router';
 import { UserContext } from '../Context/UserContext';
 import { ApiFetchers } from '../Utils/ApiFetcher';
@@ -19,7 +19,7 @@ const useUserContext = () => {
   const getRefreshToken = () => refreshToken;
   const getUserId = () => userId;
 
-  const isLoggedIn = () => !!getAccessToken();
+  // const isLoggedIn = () => !!getAccessToken();
   const isTokenAvailable = () => {
     tokenRefreshReq({ accessToken })
       .then(({ result }) => {
